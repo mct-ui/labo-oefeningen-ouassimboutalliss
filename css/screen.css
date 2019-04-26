@@ -2,6 +2,27 @@
   #FONTS
 \*------------------------------------*/
 
+
+@font-face {
+  font-family: "Clear Sans";
+  font-weight: 200;
+  src:url("../fonts/ClearSans-light-webfont.woff")format("woff");
+
+}
+
+@font-face {
+  font-family: "Clear Sans";
+  font-weight: 400;
+  src:url("../fonts/ClearSans-regular-webfont.woff")format("woff");
+
+}
+
+@font-face {
+  font-family: "Clear Sans";
+  font-weight: 600;
+  src:url("../fonts/ClearSans-medium-webfont.woff")format("woff");
+}
+
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -13,12 +34,18 @@
 */
 
 html {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: Helvetica, arial, sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 200;
+    color:#fff;
+    font-family: "Clear Sans", Helvetica, arial, sans-serif;
     box-sizing: border-box;
+    background-color: #0A257D;
+    background:linear-gradient(to bottom right,#0A257D,#061649);
+    background-attachment: fixed; /* Belangrijk !!! */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 *,
@@ -49,6 +76,10 @@ html {
 /*------------------------------------*\
   #Elements
 \*------------------------------------*/
+
+
+
+
 
 /*
     Elements: Images
@@ -205,7 +236,8 @@ a:focus {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 56.4em; /* 56.4 * 20px = 1128px */
+    max-width: 71em; /* 56.4 * 20px = 1128px */
+    /* max-width = 18px / 1278 = 71em  */
 }
 
 /*
@@ -366,6 +398,78 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+
+
+.c-logo{
+  height: 32px;
+  display: flex;
+}
+
+.c-logo__symbol{
+  height: 100%;
+
+}
+
+@media (min-width: 768px) {
+    .c-logo {
+        height: 40px;
+      }
+    }
+
+    .c-nav {
+      font-size: 13px;
+      line-height: 19.5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+    }
+    .c-nav__link {
+  text-decoration: none;
+  font-weight: 400;
+  display: block;
+  padding: 8px 0px;
+
+}
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+  color: white;}
+
+
+  @media (min-width: 768px) {
+        .c-nav__list {
+          display: flex;
+          margin-left: -16px;
+          margin-right: -16px;
+        }
+
+        .c-nav__link {
+          padding: 8px 16px;
+
+        }
+    }
+
+.c-nav__link:hover{
+  color:#DBEDFF;
+  text-shadow: 0 0 8px #8EC7FF;
+}
+
+
+
+
+  @media (min-width: 992px) {
+    .c-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .c-header__nav {
+      display: block;
+    }
+
+}
 
 /*------------------------------------*\
   #UTILITIES
